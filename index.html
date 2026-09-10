@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIROG+ — DEWB @ Brown × HAEFA</title>
+<meta name="description" content="Innovative Healthcare Approaches for the Effective Management of NCDs Among Underprivileged Populations — DEWB (Doctors & Engineers Without Borders) at Brown University, working with HAEFA on the NIROG+ Electronic Medical Record system.">
+<style>
+  :root{
+    --navy:#12355b; --teal:#1b7f79; --teal-light:#e6f4f3;
+    --gold:#e8a13d; --ink:#1d2733; --muted:#5b6b7b; --bg:#f7f9fb; --card:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+  h1,h2,h3{line-height:1.2;font-weight:700}
+  section{padding:4.5rem 1.25rem;max-width:1080px;margin:0 auto}
+  .kicker{display:inline-block;background:var(--teal-light);color:var(--teal);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .9rem;border-radius:999px;margin-bottom:1rem}
+  h2{font-size:2rem;color:var(--navy);margin-bottom:.5rem}
+  .lede{color:var(--muted);max-width:60ch;margin-bottom:2rem}
+  .grid{display:grid;gap:1.25rem}
+  .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .grid-4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+  .card{background:var(--card);border:1px solid #e3e9ef;border-radius:14px;padding:1.5rem;box-shadow:0 2px 8px rgba(18,53,91,.05)}
+  .card h3{color:var(--teal);margin-bottom:.5rem;font-size:1.1rem}
+  .num{font-size:2.2rem;font-weight:800;color:var(--navy)}
+  .num-label{font-size:.9rem;color:var(--muted)}
+  /* Hero */
+  header.hero{background:linear-gradient(135deg,var(--navy) 0%,#0e6f6a 100%);color:#fff;text-align:center;padding:6rem 1.5rem 5rem}
+  header.hero .badge{display:inline-block;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:.4rem 1.1rem;font-size:.85rem;letter-spacing:.08em;margin-bottom:1.5rem}
+  header.hero h1{font-size:clamp(2rem,5vw,3.4rem);max-width:20ch;margin:0 auto 1rem}
+  header.hero p{max-width:62ch;margin:0 auto;color:#d8ecf0}
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e3e9ef;display:flex;gap:.25rem;overflow-x:auto;padding:.6rem 1rem;justify-content:center}
+  nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-size:.85rem;font-weight:600;padding:.4rem .8rem;border-radius:8px}
+  nav a:hover{background:var(--teal-light);color:var(--teal)}
+  .alt{background:#eef4f8;max-width:none}
+  .alt-inner{max-width:1080px;margin:0 auto}
+  .flow{counter-reset:step}
+  .flow .card{position:relative;padding-left:3.6rem}
+  .flow .card::before{counter-increment:step;content:counter(step);position:absolute;left:1.1rem;top:1.35rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+  ul.tick{list-style:none}
+  ul.tick li{padding-left:1.6rem;position:relative;margin-bottom:.55rem}
+  ul.tick li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:800}
+  .timeline{border-left:3px solid var(--teal);padding-left:1.5rem;margin-left:.5rem}
+  .timeline .t-item{position:relative;margin-bottom:1.5rem}
+  .timeline .t-item::before{content:"";position:absolute;left:-1.98rem;top:.35rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--gold);border:2px solid #fff}
+  .timeline .t-date{font-weight:700;color:var(--teal);font-size:.9rem}
+  blockquote{border-left:4px solid var(--gold);background:#fffaf1;padding:.9rem 1.2rem;border-radius:0 10px 10px 0;color:#5c4a22;font-style:italic;margin:.8rem 0}
+  .stack{display:flex;flex-wrap:wrap;gap:.6rem}
+  .stack span{background:var(--navy);color:#fff;border-radius:8px;padding:.45rem .95rem;font-size:.9rem;font-weight:600}
+  footer{background:var(--navy);color:#cfe3ee;text-align:center;padding:3rem 1.5rem}
+  footer a{color:var(--gold);text-decoration:none}
+  footer h2{color:#fff}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="badge">Doctors &amp; Engineers Without Borders · Brown University</div>
+  <h1>Innovative Healthcare Approaches for the Effective Management of NCDs Among Underprivileged Populations</h1>
+  <p>A visual overview of HAEFA's NIROG+ Electronic Medical Record system — and DEWB @ Brown's engineering partnership to improve it. Adapted from HAEFA's NIROG presentation (23 November 2025) and DEWB's Spring 2026 project documentation.</p>
+</header>
+
+<nav>
+  <a href="#haefa">HAEFA</a>
+  <a href="#mission">Mission</a>
+  <a href="#activities">Core Activities</a>
+  <a href="#nirog">NIROG+ EMR</a>
+  <a href="#technology">Technology</a>
+  <a href="#flow">Clinic Flow</a>
+  <a href="#deployment">Deployment</a>
+  <a href="#dewb">DEWB's Work</a>
+</nav>
+
+<!-- Slide 2: About HAEFA -->
+<section id="haefa">
+  <span class="kicker">About Our Organization</span>
+  <h2>Health and Education for All (HAEFA)</h2>
+  <p class="lede">HAEFA is a US-based 501(c)(3) non-profit organization, enlisted in NGOAB of Bangladesh in the INGO category. It was founded by <strong>Dr. Ruhul Abid</strong>, a physician-researcher and medical scientist at the Warren Alpert Medical School, Brown University, USA — the bridge between HAEFA and DEWB @ Brown.</p>
+</section>
+
+<!-- Slide 3: Mission -->
+<section id="mission" class="alt"><div class="alt-inner">
+  <span class="kicker">Mission · Goals · Vision</span>
+  <h2>Why HAEFA Exists</h2>
+  <div class="grid grid-3">
+    <div class="card"><h3>Mission</h3><p>Provide free, quality, and comprehensive essential health coverage for marginalized and underserved people.</p></div>
+    <div class="card"><h3>Goals</h3><p>Serve underprivileged and displaced populations through a sustainable health and educational approach, applying technology and innovation in health programs.</p></div>
+    <div class="card"><h3>Vision</h3><p>A world where universal health coverage is accessible to underserved and vulnerable populations globally.</p></div>
+  </div>
+</div></section>
+
+<!-- Slides 5-6: Core activities + NCD facilities -->
+<section id="activities">
+  <span class="kicker">HAEFA's Operations in Bangladesh</span>
+  <h2>Core Activities &amp; NCD Facilities</h2>
+  <p class="lede">Non-communicable and communicable diseases are handled using the NIROG Electronic Medical Record system across HAEFA's facilities.</p>
+  <div class="grid grid-4">
+    <div class="card"><h3>NCD Management</h3><p>Screening, treatment, and long-term management of chronic disease.</p></div>
+    <div class="card"><h3>Cervical Cancer</h3><p>Screening and treatment programs.</p></div>
+    <div class="card"><h3>Tuberculosis</h3><p>TB screening in high-risk communities.</p></div>
+    <div class="card"><h3>Mental Health</h3><p>Mental health and resilience support.</p></div>
+  </div>
+  <div class="grid grid-4" style="margin-top:1.25rem">
+    <div class="card"><div class="num">10</div><div class="num-label">Conditions managed via NIROG EMR</div></div>
+    <div class="card"><h3>Conditions Covered</h3><p style="font-size:.95rem">Diabetes · Hypertension · Gestational diabetes &amp; hypertension · Arthritis · Asthma/COPD · Chronic lung conditions · Malnutrition · Anemia · Gynecological conditions · Cervical cancer · Mental health conditions</p></div>
+  </div>
+</section>
+
+<!-- Slide 7: Key figures -->
+<section class="alt" id="figures"><div class="alt-inner">
+  <span class="kicker">Key Figures</span>
+  <h2>NCD Screening, Treatment &amp; Management Using the EMR System</h2>
+  <div class="grid grid-4">
+    <div class="card"><div class="num">82,608</div><div class="num-label">FDMN Camps — Cox's Bazar (Rohingya refugee population)</div></div>
+    <div class="card"><div class="num">54,905</div><div class="num-label">NCD Project in Cox's Bazar</div></div>
+    <div class="card"><div class="num">37,500</div><div class="num-label">RMG (garment) factory workers — Noakhali</div></div>
+    <div class="card"><div class="num">8,500 / 2,500</div><div class="num-label">Additional screening &amp; rickshaw-puller outreach figures reported by HAEFA</div></div>
+  </div>
+</div></section>
+
+<!-- Slides 8-9: NIROG EMR -->
+<section id="nirog">
+  <span class="kicker">The Software</span>
+  <h2>NIROG+ — Electronic Medical Record System</h2>
+  <p class="lede">NIROG is a comprehensive EMR developed by HAEFA, in use in the FDMN camps, Noakhali and Cox's Bazar districts — and previously in the 2016 DFID program and the 2018 Grand Challenges Canada program.</p>
+  <div class="grid grid-2">
+    <div class="card"><h3>Paperless, Barcode-Identified Records</h3><p>Patient medical records are maintained digitally and retrieved using the digital health card's scannable barcode.</p></div>
+    <div class="card"><h3>Works Offline</h3><p>Solar-powered deployments that work without a constant internet connection — critical in the camps and remote upazilas.</p></div>
+    <div class="card"><h3>Encrypted, Unique Identifiers</h3><p>Tracks and records encrypted patient data under unique identifiers, giving doctors a high-technology resource for accurate follow-up care.</p></div>
+    <div class="card"><h3>Simpler Chronic-Care Follow-Up</h3><p>Follow-up of NCD, other chronic, and pregnant patients has become very simple for HAEFA due to this EMR.</p></div>
+    <div class="card"><h3>Drug-Interaction Safety</h3><p>Prevents drug interactions by suggesting contraindicated drugs — uniquely safe in emergency situations.</p></div>
+    <div class="card"><h3>WHO ICD-10 Diagnoses</h3><p>On the tablets, NIROG uses the WHO's Tenth Revision of the International Classification of Diseases to diagnose and standardize treatment and management protocols for NCDs.</p></div>
+  </div>
+</section>
+
+<!-- Slide 10: Technology -->
+<section id="technology" class="alt"><div class="alt-inner">
+  <span class="kicker">Technology Stack</span>
+  <h2>Under the Hood of NIROG+</h2>
+  <div class="stack" style="margin-bottom:1.5rem">
+    <span>Backend: Laravel (PHP)</span>
+    <span>Frontend: ReactJS</span>
+    <span>Database: Microsoft SQL Server</span>
+    <span>Reporting: Google Looker Studio &amp; Metabase</span>
+    <span>Integrated with DHIS2 server</span>
+  </div>
+  <div class="grid grid-3">
+    <div class="card"><h3>nirog-api</h3><p>REST API (PHP / Lumen 9) serving the station UI — 17 controllers, one per clinic station.</p></div>
+    <div class="card"><h3>nirog-backend</h3><p>Admin CMS (PHP / Laravel 8) — 65 modules, including ~40 reference/lookup modules (drugs, diagnoses, vaccines).</p></div>
+    <div class="card"><h3>nirog-frontend</h3><p>Station UI (React 18 + Vite, Redux Toolkit) — one screen per clinic station, offline-capable with end-of-day sync.</p></div>
+  </div>
+  <p style="margin-top:1.25rem;color:var(--muted);font-size:.95rem">Verified by DEWB from the source manifests: the database driver default is <strong>Microsoft SQL Server</strong> (<code>sqlsrv</code>) in both PHP apps — superseding the original README's claim of "MySQL or compatible database."</p>
+</div></section>
+
+<!-- Slide 11: Operational flow -->
+<section id="flow">
+  <span class="kicker">Operational Flow</span>
+  <h2>A Patient's Journey Through the Clinic</h2>
+  <p class="lede">Patients move through sequential stations; data is saved station to station against one barcode ID. Station 4 is split into sub-stations A–E.</p>
+  <div class="grid grid-3 flow">
+    <div class="card"><h3>Registration</h3><p>Patient registered and issued a barcode-identified digital health card.</p></div>
+    <div class="card"><h3>Vitals &amp; History</h3><p>Vital signs and medical history captured on the tablet.</p></div>
+    <div class="card"><h3>Consultation</h3><p>Physician consultation with ICD-10 standardized diagnosis.</p></div>
+    <div class="card"><h3>Lab &amp; Pharmacy</h3><p>Investigations and prescriptions, with drug-interaction checking.</p></div>
+    <div class="card"><h3>End-of-Day Sync</h3><p>Offline writes sync from the clinic's local SQL Server to the central server.</p></div>
+    <div class="card"><h3>Follow-Up</h3><p>Barcode retrieval enables accurate follow-up care for chronic patients.</p></div>
+  </div>
+</section>
+
+<!-- Slide 12: Reporting -->
+<section class="alt" id="dashboard"><div class="alt-inner">
+  <span class="kicker">Reporting Dashboard</span>
+  <h2>Tracking Population Health</h2>
+  <div class="grid grid-3">
+    <div class="card"><h3>Individual Tracking</h3><p>The health status of individual patients can be tracked and visualized using infographics during follow-up visits.</p></div>
+    <div class="card"><h3>Controlled vs. Uncontrolled</h3><p>Whether patients' conditions are under control can be monitored on a facility basis.</p></div>
+    <div class="card"><h3>Facility-Level Analysis</h3><p>Facility-based patient health analysis can be monitored and managed.</p></div>
+  </div>
+</div></section>
+
+<!-- Slide 13: Deployment -->
+<section id="deployment">
+  <span class="kicker">Deployment Area</span>
+  <h2>Where NIROG+ Runs</h2>
+  <p class="lede">HAEFA deployed the EMR system in <strong>79 government health facilities</strong> in collaboration with the Government of Bangladesh, DGHS, Ministry of Health and Family Welfare.</p>
+  <div class="grid grid-3">
+    <div class="card"><h3>Cox's Bazar — 66 facilities</h3><p>Cox's Bazar Sadar 250-bed District Hospital · MCWC · <strong>Ukhiya:</strong> Upazila Health Complex, 18 community clinics, 3 Union Health &amp; Family Welfare Centers, 4 Union Health Sub-Centers · <strong>Moheshkhali:</strong> Upazila Health Complex, 30 community clinics, 6 UH&amp;FWCs, 1 Union Health Sub-Center</p></div>
+    <div class="card"><h3>Noakhali — 10 facilities</h3><p>250-Bed Hospital · Begumganj, Sonaimuri, Chatkhil, Senbagh, Kabirhat, Companiganj &amp; Subornochar Upazila Health Complexes · Hatiya Upazila Health Complex · Mir Alipur Community Clinic</p></div>
+    <div class="card"><h3>FDMN Camps — 3 sites</h3><p>Camp-9, Balukhali (Cox's Bazar) · Camp-1W, Kutupalong (Cox's Bazar) · Bhasan Char (Noakhali)</p></div>
+  </div>
+  <p style="margin-top:1.25rem;color:var(--muted)">Snapshots from the field: healthcare services delivered to 37,500 RMG factory workers; hands-on EMR orientation for government service providers at UHC Noakhali; and Dr. Ruhul Abid visiting the NCD Corner at Moheshkhali UHC to monitor the deployed system.</p>
+</section>
+
+<!-- DEWB's work -->
+<section id="dewb" class="alt"><div class="alt-inner">
+  <span class="kicker">DEWB @ Brown — Our Work So Far</span>
+  <h2>The Spring 2026 Engineering Partnership</h2>
+  <p class="lede">DEWB (Doctors &amp; Engineers Without Borders) at Brown University is working with HAEFA's Dhaka IT team on two named engineering challenges. Below is the partnership timeline and what we've verified to date.</p>
+
+  <div class="grid grid-2">
+    <div>
+      <h3 style="color:var(--navy);margin-bottom:1rem">Partnership Timeline</h3>
+      <div class="timeline">
+        <div class="t-item"><div class="t-date">Sept–Oct 2025 — Compliance gate</div>DEWB engineering reaches out to Dr. Abid. HAEFA requires a signed HIPAA/Privacy &amp; Confidentiality Agreement and the UN PSEA training certificate before any code access. Four members complete both.</div>
+        <div class="t-item"><div class="t-date">23 Nov 2025 — The Dhaka demo</div>NIROG is introduced and the scope is named: improve daily synchronization <em>so that only that day's data is synchronized</em>, and improve synchronization at the <em>upazila (sub-district) level</em>.</div>
+        <div class="t-item"><div class="t-date">Feb 2026 — Tooling blocker</div>dbForge Studio (the sync tooling) is paid software past its trial; no licenses available. A second NDA, gating source code specifically, is signed.</div>
+        <div class="t-item"><div class="t-date">5 Mar 2026 — Code access granted</div>The brief, verbatim: <em>"Database optimization: there are many duplicated tables and unused tables… Synchronization Performance Enhancement: the current synchronization process takes over one and a half hours to complete."</em></div>
+        <div class="t-item"><div class="t-date">8 Apr 2026 — Sync artifacts</div>Mr. Chonchol sends the dbForge-generated batch files and <code>custom.sql</code>, noting SQL Server 2019.</div>
+        <div class="t-item"><div class="t-date">Spring 2026 — Analysis</div>DEWB team tears down the sync scripts, maps all three codebases, and documents findings — with no changes to upstream code, which DEWB does not own.</div>
+      </div>
+    </div>
+    <div>
+      <h3 style="color:var(--navy);margin-bottom:1rem">What We've Verified</h3>
+      <ul class="tick card">
+        <li><strong>Stack:</strong> Lumen 9 API (17 station controllers), Laravel 8 CMS (65 modules), React 18 station UI, Microsoft SQL Server as the driver default.</li>
+        <li><strong>Sync mechanism:</strong> end-of-day dbForge <code>/datacompare</code> batch jobs triggered from the CMS, copying clinic-local data to the central server.</li>
+        <li><strong>The two asks, both open:</strong> (1) incremental "only today's data" sync, plus upazila-level sync; (2) schema cleanup of duplicate/unused tables.</li>
+        <li><strong>Discipline:</strong> real patient data (PHI) is never copied into our repo or docs; upstream contributions go back as PRs to HAEFA's maintainer.</li>
+      </ul>
+      <blockquote>The ~90-minute sync baseline is HAEFA's figure; no timing has been measured by our team yet — that's the next milestone.</blockquote>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <h2>Thank You</h2>
+  <p style="margin:.8rem 0">Learn more about our partner:</p>
+  <p><a href="https://www.haefa.org">www.haefa.org</a> · <a href="https://www.haefabd.org">www.haefabd.org</a></p>
+  <p style="margin-top:1.5rem;font-size:.85rem;color:#9db8ca">Doctors &amp; Engineers Without Borders (DEWB) · Brown University · Spring 2026<br>Adapted from HAEFA's NIROG EMR presentation (23 Nov 2025). Field photos available in the original deck.</p>
+</footer>
+
+</body>
+</html>
