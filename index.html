@@ -35,6 +35,12 @@
   footer{background:var(--navy);color:#cfe3ee;text-align:center;padding:2.5rem 1.5rem}
   footer a{color:var(--gold);text-decoration:none}
   footer h2{color:#fff}
+  /* Status cards */
+  .status-card{text-align:left}
+  .status-icon{font-size:1.8rem;margin-bottom:.6rem}
+  .next-card{background:linear-gradient(135deg,var(--teal) 0%,var(--navy) 100%);border:none}
+  .next-card h3{color:#fff}
+  .next-card p{color:#d8ecf0}
 </style>
 </head>
 <body>
@@ -72,11 +78,32 @@
 
 <!-- Status -->
 <section id="status">
-  <span class="kicker">Project Status</span>
+  <span class="kicker">Project Status · Spring 2026</span>
   <h2>Where DEWB Comes In</h2>
   <p class="lede">Doctors &amp; Engineers Without Borders at Brown joined HAEFA's engineering effort in late 2025. After completing HAEFA's compliance and confidentiality requirements, our team gained access to the system in Spring 2026.</p>
-  <p>During the Spring 2026 semester, our team has been working to improve HAEFA's healthcare data collection platform, NIROG, by organizing and streamlining its underlying codebase. Since the platform has been developed over time by multiple contributors, much of our work has focused on understanding how the existing code functions, documenting its various components, and identifying areas where similar features or duplicated code can be consolidated. By reducing redundancy and improving the overall organization of the platform, we are working to create a stronger, more maintainable foundation for future development. These efforts will help ensure the platform remains reliable, scalable, and better equipped to support HAEFA's mission of delivering healthcare services to the Rohingya communities.</p>
-  <p>Our plans for this semester are to finish up this work and begin making fixes to improve the EHR's functionality and reliability.</p>
+
+  <div class="grid grid-2 status-grid">
+    <div class="card status-card">
+      <div class="status-icon">🔍</div>
+      <h3>Understanding the Platform</h3>
+      <p>Built over time by many contributors, NIROG's codebase takes patience to navigate. Our team has spent the semester digging into how it all works — and documenting every component as we go.</p>
+    </div>
+    <div class="card status-card">
+      <div class="status-icon">🧹</div>
+      <h3>Streamlining &amp; Consolidating</h3>
+      <p>We're identifying duplicated code and similar features that can be consolidated — reducing redundancy to create a stronger, more maintainable foundation for future development.</p>
+    </div>
+    <div class="card status-card">
+      <div class="status-icon">🏗️</div>
+      <h3>Why It Matters</h3>
+      <p>A cleaner, better-organized platform means NIROG stays reliable and scalable — better equipped to support HAEFA's mission of delivering healthcare to the Rohingya communities.</p>
+    </div>
+    <div class="card status-card next-card">
+      <div class="status-icon">🚀</div>
+      <h3>This Semester</h3>
+      <p>We're finishing up this work and beginning fixes that improve NIROG's functionality and reliability.</p>
+    </div>
+  </div>
 </section>
 
 <footer>
